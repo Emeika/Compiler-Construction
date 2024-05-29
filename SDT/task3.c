@@ -18,10 +18,10 @@ int main(int argc, char *argv[])
     int size = 0;
     int operandItr = 0;
 
-    // assembly register counter
+    // assembly code register
     int registerCounter = 1;
     int *registerValues = NULL;
-    char *assemblyBuffer = malloc(1000); // Adjust the size as needed
+    char *assemblyBuffer = malloc(1000);
     memset(assemblyBuffer, '\0', 1000);
     int bufferIndex = 0;
 
