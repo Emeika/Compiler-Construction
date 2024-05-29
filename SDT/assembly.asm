@@ -1,0 +1,5 @@
+LI R1, 2
+LI R2, 5
+LI R3, 10
+MUL R0, R2, R3
+ADD R4, R1, R0
