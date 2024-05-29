@@ -81,7 +81,6 @@ int main(int argc, char *argv[])
             else
             {
                 FILE *fp = fopen("assembly.asm", "a");
-                char *assemblyInstr;
                 switch (s1_stack[top1])
                 {
                 case '+':
