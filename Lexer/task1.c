@@ -11,25 +11,19 @@ void tokenize_expression(char *expression)
 
     while (*expression != '$')
     {
-        if ((*expression >= 'a' && *expression <= 'z') ||
-            *expression == '+' || *expression == '-' ||
-            *expression == '*' || *expression == '/')
+        if (*expression >= 'a' && *expression <= 'z')
         {
-
-            if (*expression >= 'a' && *expression <= 'z')
+            operand_count++;
+            printf("int literal found: %c\n", *expression);
+            if (operand_count > 5)
             {
-                operand_count++;
-                printf("int literal found: %c\n", *expression);
-                if (operand_count > 5)
-                {
-                    printf("More than five operands found.\n");
-                    exit(1);
-                }
+                printf("More than five operands found.\n");
+                exit(1);
             }
-            else
-            {
-                printf("Arithmetic operator: %c\n", *expression);
-            }
+        }
+        else if (*expression == '+' || *expression == '-' || *expression == '*' || *expression == '/')
+        {
+            printf("Arithmetic operator: %c\n", *expression);
         }
         else
         {
